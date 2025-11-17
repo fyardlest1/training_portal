@@ -1,0 +1,86 @@
+[
+	{
+		"model": "academy.Trainer",
+		"pk": 1,
+		"fields": {
+			"first_name": "Emily",
+			"last_name": "Johnson",
+			"email": "emily.johnson@example.com",
+			"expertise": "Python Programming",
+			"is_active": true,
+			"profile_picture": "",
+			"created_at": "2025-01-11T09:00:00Z",
+			"updated_at": "2025-01-11T09:00:00Z"
+		}
+	},
+	{
+		"model": "academy.Trainer",
+		"pk": 2,
+		"fields": {
+			"first_name": "Michael",
+			"last_name": "Turner",
+			"email": "michael.turner@example.com",
+			"expertise": "Full-Stack Development",
+			"is_active": true,
+			"profile_picture": "",
+			"created_at": "2025-01-11T09:10:00Z",
+			"updated_at": "2025-01-11T09:10:00Z"
+		}
+	},
+	{
+		"model": "academy.Trainer",
+		"pk": 3,
+		"fields": {
+			"first_name": "Sarah",
+			"last_name": "Williams",
+			"email": "sarah.williams@example.com",
+			"expertise": "Data Analysis",
+			"is_active": true,
+			"profile_picture": "",
+			"created_at": "2025-01-11T09:20:00Z",
+			"updated_at": "2025-01-11T09:20:00Z"
+		}
+	},
+	{
+		"model": "academy.Trainer",
+		"pk": 4,
+		"fields": {
+			"first_name": "David",
+			"last_name": "Brown",
+			"email": "david.brown@example.com",
+			"expertise": "Machine Learning",
+			"is_active": true,
+			"profile_picture": "",
+			"created_at": "2025-01-11T09:30:00Z",
+			"updated_at": "2025-01-11T09:30:00Z"
+		}
+	},
+	{
+		"model": "academy.Trainer",
+		"pk": 5,
+		"fields": {
+			"first_name": "Laura",
+			"last_name": "Martinez",
+			"email": "laura.martinez@example.com",
+			"expertise": "JavaScript Development",
+			"is_active": true,
+			"profile_picture": "",
+			"created_at": "2025-01-11T09:40:00Z",
+			"updated_at": "2025-01-11T09:40:00Z"
+		}
+	},
+	{
+		"model": "academy.Trainer",
+		"pk": 6,
+		"fields": {
+			"first_name": "Kevin",
+			"last_name": "Clark",
+			"email": "kevin.clark@example.com",
+			"expertise": "Django Backend",
+			"is_active": true,
+			"profile_picture": "",
+			"created_at": "2025-01-11T09:50:00Z",
+			"updated_at": "2025-01-11T09:50:00Z"
+		}
+	}
+]

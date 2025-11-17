@@ -1,0 +1,392 @@
+[
+	{
+		"model": "academy.Student",
+		"pk": 1,
+		"fields": {
+			"first_name": "James",
+			"last_name": "Coleman",
+			"email": "james.coleman@example.com",
+			"is_active": true,
+			"enrolled_course": 1,
+			"enrollment_date": "2025-02-01",
+			"profile_picture": ""
+		}
+	},
+	{
+		"model": "academy.Student",
+		"pk": 2,
+		"fields": {
+			"first_name": "Olivia",
+			"last_name": "Baker",
+			"email": "olivia.baker@example.com",
+			"is_active": true,
+			"enrolled_course": 1,
+			"enrollment_date": "2025-02-01",
+			"profile_picture": ""
+		}
+	},
+	{
+		"model": "academy.Student",
+		"pk": 3,
+		"fields": {
+			"first_name": "Henry",
+			"last_name": "Mitchell",
+			"email": "henry.mitchell@example.com",
+			"is_active": true,
+			"enrolled_course": 1,
+			"enrollment_date": "2025-02-02",
+			"profile_picture": ""
+		}
+	},
+	{
+		"model": "academy.Student",
+		"pk": 4,
+		"fields": {
+			"first_name": "Emma",
+			"last_name": "Reed",
+			"email": "emma.reed@example.com",
+			"is_active": true,
+			"enrolled_course": 1,
+			"enrollment_date": "2025-02-02",
+			"profile_picture": ""
+		}
+	},
+	{
+		"model": "academy.Student",
+		"pk": 5,
+		"fields": {
+			"first_name": "Daniel",
+			"last_name": "Wright",
+			"email": "daniel.wright@example.com",
+			"is_active": true,
+			"enrolled_course": 1,
+			"enrollment_date": "2025-02-03",
+			"profile_picture": ""
+		}
+	},
+	{
+		"model": "academy.Student",
+		"pk": 6,
+		"fields": {
+			"first_name": "Sophia",
+			"last_name": "Foster",
+			"email": "sophia.foster@example.com",
+			"is_active": true,
+			"enrolled_course": 2,
+			"enrollment_date": "2025-02-04",
+			"profile_picture": ""
+		}
+	},
+	{
+		"model": "academy.Student",
+		"pk": 7,
+		"fields": {
+			"first_name": "Ethan",
+			"last_name": "Howard",
+			"email": "ethan.howard@example.com",
+			"is_active": true,
+			"enrolled_course": 2,
+			"enrollment_date": "2025-02-04",
+			"profile_picture": ""
+		}
+	},
+	{
+		"model": "academy.Student",
+		"pk": 8,
+		"fields": {
+			"first_name": "Ava",
+			"last_name": "Price",
+			"email": "ava.price@example.com",
+			"is_active": true,
+			"enrolled_course": 2,
+			"enrollment_date": "2025-02-05",
+			"profile_picture": ""
+		}
+	},
+	{
+		"model": "academy.Student",
+		"pk": 9,
+		"fields": {
+			"first_name": "Logan",
+			"last_name": "Morgan",
+			"email": "logan.morgan@example.com",
+			"is_active": true,
+			"enrolled_course": 2,
+			"enrollment_date": "2025-02-06",
+			"profile_picture": ""
+		}
+	},
+	{
+		"model": "academy.Student",
+		"pk": 10,
+		"fields": {
+			"first_name": "Grace",
+			"last_name": "Hughes",
+			"email": "grace.hughes@example.com",
+			"is_active": true,
+			"enrolled_course": 2,
+			"enrollment_date": "2025-02-06",
+			"profile_picture": ""
+		}
+	},
+	{
+		"model": "academy.Student",
+		"pk": 11,
+		"fields": {
+			"first_name": "Chloe",
+			"last_name": "Ward",
+			"email": "chloe.ward@example.com",
+			"is_active": true,
+			"enrolled_course": 3,
+			"enrollment_date": "2025-02-07",
+			"profile_picture": ""
+		}
+	},
+	{
+		"model": "academy.Student",
+		"pk": 12,
+		"fields": {
+			"first_name": "Jack",
+			"last_name": "Peterson",
+			"email": "jack.peterson@example.com",
+			"is_active": true,
+			"enrolled_course": 3,
+			"enrollment_date": "2025-02-07",
+			"profile_picture": ""
+		}
+	},
+	{
+		"model": "academy.Student",
+		"pk": 13,
+		"fields": {
+			"first_name": "Zoe",
+			"last_name": "Ross",
+			"email": "zoe.ross@example.com",
+			"is_active": true,
+			"enrolled_course": 3,
+			"enrollment_date": "2025-02-08",
+			"profile_picture": ""
+		}
+	},
+	{
+		"model": "academy.Student",
+		"pk": 14,
+		"fields": {
+			"first_name": "Mason",
+			"last_name": "Bell",
+			"email": "mason.bell@example.com",
+			"is_active": true,
+			"enrolled_course": 3,
+			"enrollment_date": "2025-02-09",
+			"profile_picture": ""
+		}
+	},
+	{
+		"model": "academy.Student",
+		"pk": 15,
+		"fields": {
+			"first_name": "Lily",
+			"last_name": "Murphy",
+			"email": "lily.murphy@example.com",
+			"is_active": true,
+			"enrolled_course": 3,
+			"enrollment_date": "2025-02-09",
+			"profile_picture": ""
+		}
+	},
+	{
+		"model": "academy.Student",
+		"pk": 16,
+		"fields": {
+			"first_name": "Sebastian",
+			"last_name": "Cook",
+			"email": "sebastian.cook@example.com",
+			"is_active": true,
+			"enrolled_course": 4,
+			"enrollment_date": "2025-02-10",
+			"profile_picture": ""
+		}
+	},
+	{
+		"model": "academy.Student",
+		"pk": 17,
+		"fields": {
+			"first_name": "Hannah",
+			"last_name": "Rivera",
+			"email": "hannah.rivera@example.com",
+			"is_active": true,
+			"enrolled_course": 4,
+			"enrollment_date": "2025-02-10",
+			"profile_picture": ""
+		}
+	},
+	{
+		"model": "academy.Student",
+		"pk": 18,
+		"fields": {
+			"first_name": "Nathan",
+			"last_name": "Ward",
+			"email": "nathan.ward@example.com",
+			"is_active": true,
+			"enrolled_course": 4,
+			"enrollment_date": "2025-02-11",
+			"profile_picture": ""
+		}
+	},
+	{
+		"model": "academy.Student",
+		"pk": 19,
+		"fields": {
+			"first_name": "Aria",
+			"last_name": "Kelly",
+			"email": "aria.kelly@example.com",
+			"is_active": true,
+			"enrolled_course": 4,
+			"enrollment_date": "2025-02-11",
+			"profile_picture": ""
+		}
+	},
+	{
+		"model": "academy.Student",
+		"pk": 20,
+		"fields": {
+			"first_name": "Owen",
+			"last_name": "Bailey",
+			"email": "owen.bailey@example.com",
+			"is_active": true,
+			"enrolled_course": 4,
+			"enrollment_date": "2025-02-12",
+			"profile_picture": ""
+		}
+	},
+	{
+		"model": "academy.Student",
+		"pk": 21,
+		"fields": {
+			"first_name": "Isabella",
+			"last_name": "Cooper",
+			"email": "isabella.cooper@example.com",
+			"is_active": true,
+			"enrolled_course": 5,
+			"enrollment_date": "2025-02-13",
+			"profile_picture": ""
+		}
+	},
+	{
+		"model": "academy.Student",
+		"pk": 22,
+		"fields": {
+			"first_name": "Luke",
+			"last_name": "Richardson",
+			"email": "luke.richardson@example.com",
+			"is_active": true,
+			"enrolled_course": 5,
+			"enrollment_date": "2025-02-13",
+			"profile_picture": ""
+		}
+	},
+	{
+		"model": "academy.Student",
+		"pk": 23,
+		"fields": {
+			"first_name": "Sofia",
+			"last_name": "Griffin",
+			"email": "sofia.griffin@example.com",
+			"is_active": true,
+			"enrolled_course": 5,
+			"enrollment_date": "2025-02-14",
+			"profile_picture": ""
+		}
+	},
+	{
+		"model": "academy.Student",
+		"pk": 24,
+		"fields": {
+			"first_name": "Gabriel",
+			"last_name": "Bryant",
+			"email": "gabriel.bryant@example.com",
+			"is_active": true,
+			"enrolled_course": 5,
+			"enrollment_date": "2025-02-14",
+			"profile_picture": ""
+		}
+	},
+	{
+		"model": "academy.Student",
+		"pk": 25,
+		"fields": {
+			"first_name": "Mila",
+			"last_name": "Russell",
+			"email": "mila.russell@example.com",
+			"is_active": true,
+			"enrolled_course": 5,
+			"enrollment_date": "2025-02-15",
+			"profile_picture": ""
+		}
+	},
+	{
+		"model": "academy.Student",
+		"pk": 26,
+		"fields": {
+			"first_name": "Elijah",
+			"last_name": "Perry",
+			"email": "elijah.perry@example.com",
+			"is_active": true,
+			"enrolled_course": 6,
+			"enrollment_date": "2025-02-16",
+			"profile_picture": ""
+		}
+	},
+	{
+		"model": "academy.Student",
+		"pk": 27,
+		"fields": {
+			"first_name": "Charlotte",
+			"last_name": "Simmons",
+			"email": "charlotte.simmons@example.com",
+			"is_active": true,
+			"enrolled_course": 6,
+			"enrollment_date": "2025-02-16",
+			"profile_picture": "g"
+		}
+	},
+	{
+		"model": "academy.Student",
+		"pk": 28,
+		"fields": {
+			"first_name": "Benjamin",
+			"last_name": "Cruz",
+			"email": "benjamin.cruz@example.com",
+			"is_active": true,
+			"enrolled_course": 6,
+			"enrollment_date": "2025-02-17",
+			"profile_picture": ""
+		}
+	},
+	{
+		"model": "academy.Student",
+		"pk": 29,
+		"fields": {
+			"first_name": "Scarlett",
+			"last_name": "Jenkins",
+			"email": "scarlett.jenkins@example.com",
+			"is_active": true,
+			"enrolled_course": 6,
+			"enrollment_date": "2025-02-17",
+			"profile_picture": ""
+		}
+	},
+	{
+		"model": "academy.Student",
+		"pk": 30,
+		"fields": {
+			"first_name": "Wyatt",
+			"last_name": "Fleming",
+			"email": "wyatt.fleming@example.com",
+			"is_active": true,
+			"enrolled_course": 6,
+			"enrollment_date": "2025-02-18",
+			"profile_picture": ""
+		}
+	}
+]

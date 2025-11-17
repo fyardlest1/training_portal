@@ -122,7 +122,7 @@ STATIC_URL = 'static/'
 
 STATICFILES_DIRS = [ 
     # project_name/static_folder
-    'academy/static',
+    # 'academy/static',
     'home/static',
 ]
 
@@ -130,7 +130,7 @@ STATIC_ROOT = BASE_DIR / 'staticfiles'
 
 # project_name/static_folder
 MEDIA_URL = '/media/'
-MEDIA_ROOT = BASE_DIR / 'mediafiles'
+MEDIA_ROOT = BASE_DIR / 'media'
 
 
 # Default primary key field type

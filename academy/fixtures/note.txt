@@ -1,0 +1,5 @@
+to run the fixtures and load data to the db:
+
+py manage.py loaddata courses.json
+py manage.py loaddata trainers.json
+py manage.py loaddata students.json
