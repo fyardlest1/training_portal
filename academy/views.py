@@ -1,9 +1,16 @@
 from django.shortcuts import render
+from .models import Course, Trainer, Student
 
-# Create your views here.
+
+
 def course_list(request):
     # Logic to retrieve and display a list of courses
-    pass
+    courses = Course.objects.all()
+    
+    context = {
+        'courses': courses,
+    }
+    return render(request, 'academy/course-list.html', context)
 
 
 def course_detail(request, pk):
@@ -13,7 +20,12 @@ def course_detail(request, pk):
 
 def trainer_list(request):
     # Logic to retrieve and display a list of trainers
-    pass
+    instructors = Trainer.objects.all()
+    
+    context = {
+        'instructors': instructors
+    }
+    return render(request, 'academy/trainer-list.html', context)
 
 
 def trainer_detail(request, pk):
@@ -23,7 +35,7 @@ def trainer_detail(request, pk):
 
 def student_list(request):
     # Logic to retrieve and display a list of students
-    pass
+    return render(request, 'academy/student-list.html')
 
 
 def student_detail(request, pk):
