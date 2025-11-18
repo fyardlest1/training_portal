@@ -13,6 +13,7 @@
                     <th scope="col">Course Name</th>
                     <th scope="col">Course Duration</th>
                     <th scope="col">Course Description</th>
+                    <th scope="col">Course Price</th>
                 </tr>
             </thead>
             <tbody>
@@ -23,8 +24,10 @@
                         <img src="{{ course.course_image.url }}" alt="" width="50" height="50" class="me-2">
                         <span>{{ course }} </span>
                     </td>
-                    <td>{{ course.duration_in_weeks }} Week</td>
+                    <td class="fw-bold">{{ course.duration_in_weeks }} Week</td>
                     <td>{{ course.description }}</td>
+                    <!-- Remove the decimal part of a floating-point -->
+                    <td class="fw-bold fst-italic">${{ course.price|floatformat }}</td>
                 </tr>
                 {% endfor %}
             </tbody>

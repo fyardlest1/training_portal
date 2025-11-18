@@ -5,6 +5,7 @@ class Course(models.Model):
     course_name = models.CharField(max_length=100)
     description = models.TextField()
     duration_in_weeks = models.IntegerField()
+    price = models.DecimalField(max_digits=8, decimal_places=2)
     course_image = models.ImageField(
         upload_to='course_images/',
         blank=True,

@@ -3,7 +3,7 @@ from .models import Course, Trainer, Student
 
 
 class CourseAdmin(admin.ModelAdmin):
-    list_display = ('course_name', 'duration_in_weeks', 'created_at')
+    list_display = ('course_name', 'duration_in_weeks', 'price', 'created_at')
     list_filter = ('created_at', 'duration_in_weeks')
     search_fields = ('course_name',)
 
