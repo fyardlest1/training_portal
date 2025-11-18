@@ -9,7 +9,7 @@ class Course(models.Model):
         upload_to='course_images/',
         blank=True,
         null=True,
-        default='course_images/default.jpg'
+        default='images/default_course.png'
     )
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
@@ -27,7 +27,7 @@ class Trainer(models.Model):
         upload_to='instructor_pictures/',
         blank=True,
         null=True,
-        default='instructor_pictures/default_profile.png'
+        default='images/default_profile.png'
     )
     is_active = models.BooleanField(default=True)
     created_at = models.DateTimeField(auto_now_add=True)
@@ -44,15 +44,18 @@ class Student(models.Model):
     first_name = models.CharField(max_length=50)
     last_name = models.CharField(max_length=50)
     email = models.EmailField(unique=True)
-    enrolled_course = models.ForeignKey(Course, on_delete=models.CASCADE)
+    enrolled_course = models.ForeignKey(Course, on_delete=models.SET_NULL, null=True, related_name='students')
     enrollment_date = models.DateField()
     profile_picture = models.ImageField(
         upload_to='student_pictures/',
         blank=True,
         null=True,
-        default='student_pictures/default_profile.png'
+        default='images/default_profile.png'
     )
     is_active = models.BooleanField(default=True)
+    trainer = models.ForeignKey(Trainer, on_delete=models.SET_NULL, null=True, related_name='students')
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
 
     def __str__(self):
         return f"{self.first_name} {self.last_name}"

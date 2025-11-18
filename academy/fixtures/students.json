@@ -9,7 +9,7 @@
 			"is_active": true,
 			"enrolled_course": 1,
 			"enrollment_date": "2025-02-01",
-			"profile_picture": ""
+			"profile_picture": "images/default_profile.png"
 		}
 	},
 	{
@@ -22,7 +22,7 @@
 			"is_active": true,
 			"enrolled_course": 1,
 			"enrollment_date": "2025-02-01",
-			"profile_picture": ""
+			"profile_picture": "images/default_profile.png"
 		}
 	},
 	{
@@ -35,7 +35,7 @@
 			"is_active": true,
 			"enrolled_course": 1,
 			"enrollment_date": "2025-02-02",
-			"profile_picture": ""
+			"profile_picture": "images/default_profile.png"
 		}
 	},
 	{
@@ -48,7 +48,7 @@
 			"is_active": true,
 			"enrolled_course": 1,
 			"enrollment_date": "2025-02-02",
-			"profile_picture": ""
+			"profile_picture": "images/default_profile.png"
 		}
 	},
 	{
@@ -61,7 +61,7 @@
 			"is_active": true,
 			"enrolled_course": 1,
 			"enrollment_date": "2025-02-03",
-			"profile_picture": ""
+			"profile_picture": "images/default_profile.png"
 		}
 	},
 	{
@@ -74,7 +74,7 @@
 			"is_active": true,
 			"enrolled_course": 2,
 			"enrollment_date": "2025-02-04",
-			"profile_picture": ""
+			"profile_picture": "images/default_profile.png"
 		}
 	},
 	{
@@ -87,7 +87,7 @@
 			"is_active": true,
 			"enrolled_course": 2,
 			"enrollment_date": "2025-02-04",
-			"profile_picture": ""
+			"profile_picture": "images/default_profile.png"
 		}
 	},
 	{
@@ -100,7 +100,7 @@
 			"is_active": true,
 			"enrolled_course": 2,
 			"enrollment_date": "2025-02-05",
-			"profile_picture": ""
+			"profile_picture": "images/default_profile.png"
 		}
 	},
 	{
@@ -113,7 +113,7 @@
 			"is_active": true,
 			"enrolled_course": 2,
 			"enrollment_date": "2025-02-06",
-			"profile_picture": ""
+			"profile_picture": "images/default_profile.png"
 		}
 	},
 	{
@@ -126,7 +126,7 @@
 			"is_active": true,
 			"enrolled_course": 2,
 			"enrollment_date": "2025-02-06",
-			"profile_picture": ""
+			"profile_picture": "images/default_profile.png"
 		}
 	},
 	{
@@ -139,7 +139,7 @@
 			"is_active": true,
 			"enrolled_course": 3,
 			"enrollment_date": "2025-02-07",
-			"profile_picture": ""
+			"profile_picture": "images/default_profile.png"
 		}
 	},
 	{
@@ -152,7 +152,7 @@
 			"is_active": true,
 			"enrolled_course": 3,
 			"enrollment_date": "2025-02-07",
-			"profile_picture": ""
+			"profile_picture": "images/default_profile.png"
 		}
 	},
 	{
@@ -165,7 +165,7 @@
 			"is_active": true,
 			"enrolled_course": 3,
 			"enrollment_date": "2025-02-08",
-			"profile_picture": ""
+			"profile_picture": "images/default_profile.png"
 		}
 	},
 	{
@@ -178,7 +178,7 @@
 			"is_active": true,
 			"enrolled_course": 3,
 			"enrollment_date": "2025-02-09",
-			"profile_picture": ""
+			"profile_picture": "images/default_profile.png"
 		}
 	},
 	{
@@ -191,7 +191,7 @@
 			"is_active": true,
 			"enrolled_course": 3,
 			"enrollment_date": "2025-02-09",
-			"profile_picture": ""
+			"profile_picture": "images/default_profile.png"
 		}
 	},
 	{
@@ -204,7 +204,7 @@
 			"is_active": true,
 			"enrolled_course": 4,
 			"enrollment_date": "2025-02-10",
-			"profile_picture": ""
+			"profile_picture": "images/default_profile.png"
 		}
 	},
 	{
@@ -217,7 +217,7 @@
 			"is_active": true,
 			"enrolled_course": 4,
 			"enrollment_date": "2025-02-10",
-			"profile_picture": ""
+			"profile_picture": "images/default_profile.png"
 		}
 	},
 	{
@@ -230,7 +230,7 @@
 			"is_active": true,
 			"enrolled_course": 4,
 			"enrollment_date": "2025-02-11",
-			"profile_picture": ""
+			"profile_picture": "images/default_profile.png"
 		}
 	},
 	{
@@ -243,7 +243,7 @@
 			"is_active": true,
 			"enrolled_course": 4,
 			"enrollment_date": "2025-02-11",
-			"profile_picture": ""
+			"profile_picture": "images/default_profile.png"
 		}
 	},
 	{
@@ -256,7 +256,7 @@
 			"is_active": true,
 			"enrolled_course": 4,
 			"enrollment_date": "2025-02-12",
-			"profile_picture": ""
+			"profile_picture": "images/default_profile.png"
 		}
 	},
 	{
@@ -269,7 +269,7 @@
 			"is_active": true,
 			"enrolled_course": 5,
 			"enrollment_date": "2025-02-13",
-			"profile_picture": ""
+			"profile_picture": "images/default_profile.png"
 		}
 	},
 	{
@@ -282,7 +282,7 @@
 			"is_active": true,
 			"enrolled_course": 5,
 			"enrollment_date": "2025-02-13",
-			"profile_picture": ""
+			"profile_picture": "images/default_profile.png"
 		}
 	},
 	{
@@ -295,7 +295,7 @@
 			"is_active": true,
 			"enrolled_course": 5,
 			"enrollment_date": "2025-02-14",
-			"profile_picture": ""
+			"profile_picture": "images/default_profile.png"
 		}
 	},
 	{
@@ -308,7 +308,7 @@
 			"is_active": true,
 			"enrolled_course": 5,
 			"enrollment_date": "2025-02-14",
-			"profile_picture": ""
+			"profile_picture": "images/default_profile.png"
 		}
 	},
 	{
@@ -321,7 +321,7 @@
 			"is_active": true,
 			"enrolled_course": 5,
 			"enrollment_date": "2025-02-15",
-			"profile_picture": ""
+			"profile_picture": "images/default_profile.png"
 		}
 	},
 	{
@@ -334,7 +334,7 @@
 			"is_active": true,
 			"enrolled_course": 6,
 			"enrollment_date": "2025-02-16",
-			"profile_picture": ""
+			"profile_picture": "images/default_profile.png"
 		}
 	},
 	{
@@ -347,7 +347,7 @@
 			"is_active": true,
 			"enrolled_course": 6,
 			"enrollment_date": "2025-02-16",
-			"profile_picture": "g"
+			"profile_picture": "images/default_profile.png"
 		}
 	},
 	{
@@ -360,7 +360,7 @@
 			"is_active": true,
 			"enrolled_course": 6,
 			"enrollment_date": "2025-02-17",
-			"profile_picture": ""
+			"profile_picture": "images/default_profile.png"
 		}
 	},
 	{
@@ -373,7 +373,7 @@
 			"is_active": true,
 			"enrolled_course": 6,
 			"enrollment_date": "2025-02-17",
-			"profile_picture": ""
+			"profile_picture": "images/default_profile.png"
 		}
 	},
 	{
@@ -386,7 +386,7 @@
 			"is_active": true,
 			"enrolled_course": 6,
 			"enrollment_date": "2025-02-18",
-			"profile_picture": ""
+			"profile_picture": "images/default_profile.png"
 		}
 	}
 ]

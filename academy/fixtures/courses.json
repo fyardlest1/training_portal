@@ -6,7 +6,7 @@
 			"course_name": "Python Programming Bootcamp",
 			"description": "A complete introduction to Python covering basics to intermediate concepts.",
 			"duration_in_weeks": 8,
-			"course_image": "course_images/python.jpg",
+			"course_image": "images/default_course.png",
 			"created_at": "2025-01-10T10:00:00Z",
 			"updated_at": "2025-01-10T10:00:00Z"
 		}
@@ -18,7 +18,7 @@
 			"course_name": "Full-Stack Web Development",
 			"description": "Learn frontend and backend development using HTML, CSS, JavaScript, and Django.",
 			"duration_in_weeks": 12,
-			"course_image": "course_images/fullstack.jpg",
+			"course_image": "images/default_course.png",
 			"created_at": "2025-01-10T10:05:00Z",
 			"updated_at": "2025-01-10T10:05:00Z"
 		}
@@ -30,7 +30,7 @@
 			"course_name": "Data Analysis With Pandas",
 			"description": "Master data cleaning, manipulation, and visualization using Python’s pandas library.",
 			"duration_in_weeks": 6,
-			"course_image": "course_images/pandas.jpg",
+			"course_image": "images/default_course.png",
 			"created_at": "2025-01-10T10:10:00Z",
 			"updated_at": "2025-01-10T10:10:00Z"
 		}
@@ -42,7 +42,7 @@
 			"course_name": "Machine Learning Fundamentals",
 			"description": "A practical guide to machine learning models, training, tuning, and evaluation.",
 			"duration_in_weeks": 10,
-			"course_image": "course_images/ml.jpg",
+			"course_image": "images/default_course.png",
 			"created_at": "2025-01-10T10:15:00Z",
 			"updated_at": "2025-01-10T10:15:00Z"
 		}
@@ -54,7 +54,7 @@
 			"course_name": "JavaScript for Beginners",
 			"description": "Start your programming journey by learning core JavaScript concepts.",
 			"duration_in_weeks": 5,
-			"course_image": "course_images/js.jpg",
+			"course_image": "images/default_course.png",
 			"created_at": "2025-01-10T10:20:00Z",
 			"updated_at": "2025-01-10T10:20:00Z"
 		}
@@ -66,7 +66,7 @@
 			"course_name": "Django Backend Development",
 			"description": "Create dynamic web applications using Django, models, views, and templates.",
 			"duration_in_weeks": 9,
-			"course_image": "course_images/django.jpg",
+			"course_image": "images/default_course.png",
 			"created_at": "2025-01-10T10:25:00Z",
 			"updated_at": "2025-01-10T10:25:00Z"
 		}

@@ -12,18 +12,18 @@ class TrainerAdmin(admin.ModelAdmin):
     list_display = ('full_name', 'email', 'expertise', 'is_active', 'created_at')
     list_filter = ('is_active', 'created_at',)
     list_editable = ('is_active',)
+    list_display_links = ('full_name', 'email')
     search_fields = ('first_name', 'last_name', 'email', 'expertise')
     ordering = ('last_name', 'first_name')
-    list_display_links = ('full_name', 'email')
     
 
 class StudentAdmin(admin.ModelAdmin):
-    list_display = ('full_name', 'email', 'enrolled_course', 'enrollment_date', 'is_active')
+    list_display = ('full_name', 'email', 'enrolled_course', 'enrollment_date', 'is_active', 'trainer')
     list_filter = ('is_active',)
-    list_editable = ('is_active',) 
-    search_fields = ('first_name', 'last_name', 'email')   
-    ordering = ('last_name', 'first_name')
+    list_editable = ('is_active', 'trainer') 
     list_display_links = ('full_name', 'email')
+    search_fields = ('first_name', 'last_name', 'email', 'enrolled_course__course_name',)   
+    ordering = ('last_name', 'first_name')
 
 
 # Register your models here.

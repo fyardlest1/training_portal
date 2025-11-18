@@ -35,7 +35,14 @@ def trainer_detail(request, pk):
 
 def student_list(request):
     # Logic to retrieve and display a list of students
-    return render(request, 'academy/student-list.html')
+    students = Student.objects.all()
+    # trainer = Trainer.objects.get_queryset()
+        
+    context = {
+        'students': students,
+        # 'trainer': trainer,
+    }
+    return render(request, 'academy/student-list.html', context)
 
 
 def student_detail(request, pk):
