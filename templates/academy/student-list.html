@@ -1,4 +1,8 @@
-{% extends 'base.html' %} {% load static %} {% block content %}
+{% extends 'base.html' %} 
+
+{% load static %} 
+
+{% block content %}
 <div class="container mt-4">
 	<div class="jumbotron">
 		<h2 class="display-5">The Student list!</h2>
@@ -13,6 +17,7 @@
 					<th scope="col">Email</th>
 					<th scope="col">Trainer Name</th>
 					<th scope="col">Active?</th>
+					<th scope="col">Actions</th>
 				</tr>
 			</thead>
 			<tbody>
@@ -49,6 +54,32 @@
                     {% else %}
                         <td class="text-danger">No</td>
                     {% endif %}
+
+					<td>
+						<div class="d-flex gap-2">
+							<a href=""
+								data-bs-toggle="tooltip" data-bs-placement="top"
+								data-bs-custom-class="custom-tooltip"
+								data-bs-title="See Details"
+							>
+								<i class='fa fa-eye text-success'></i>
+							</a>
+							<a href=""
+								data-bs-toggle="tooltip" data-bs-placement="top"
+								data-bs-custom-class="custom-tooltip"
+								data-bs-title="Edit Student"
+							>
+								<i class='fa fa-edit text-primary'></i>
+							</a>
+							<a href=""
+								data-bs-toggle="tooltip" data-bs-placement="top"
+								data-bs-custom-class="custom-tooltip"
+								data-bs-title="Delete Student"
+							>
+								<i class='fa fa-trash text-danger'></i>
+							</a>
+						</div>
+					</td>
 				</tr>
 				{% endfor %}
 			</tbody>

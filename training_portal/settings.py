@@ -40,6 +40,10 @@ INSTALLED_APPS = [
     # local apps
     'academy',
     'home',
+    'accounts',
+    
+    # third party apps
+    'widget_tweaks',
 ]
 
 MIDDLEWARE = [

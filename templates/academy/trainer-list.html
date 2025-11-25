@@ -11,6 +11,7 @@
 					<th scope="col">Name</th>
 					<th scope="col">Expertise</th>
 					<th scope="col">Email</th>
+					<th scope="col">Actions</th>
 				</tr>
 			</thead>
 			<tbody>
@@ -39,6 +40,31 @@
 					</td>
 					<td>{{ instructor.expertise }}</td>
 					<td>{{ instructor.email }}</td>
+					<td>
+						<div class="d-flex gap-2">
+							<a href=""
+								data-bs-toggle="tooltip" data-bs-placement="top"
+								data-bs-custom-class="custom-tooltip"
+								data-bs-title="See Details"
+							>
+								<i class='fa fa-eye text-success'></i>
+							</a>
+							<a href=""
+								data-bs-toggle="tooltip" data-bs-placement="top"
+								data-bs-custom-class="custom-tooltip"
+								data-bs-title="Edit Trainer"
+							>
+								<i class='fa fa-edit text-primary'></i>
+							</a>
+							<a href=""
+								data-bs-toggle="tooltip" data-bs-placement="top"
+								data-bs-custom-class="custom-tooltip"
+								data-bs-title="Delete Trainer"
+							>
+								<i class='fa fa-trash text-danger'></i>
+							</a>
+						</div>
+					</td>
 				</tr>
 				{% endfor %}
 			</tbody>
