@@ -10,7 +10,7 @@ class Course(models.Model):
         upload_to='course_images/',
         blank=True,
         null=True,
-        default='images/default_course.png'
+        default='default_course.png'
     )
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
@@ -28,8 +28,9 @@ class Trainer(models.Model):
         upload_to='instructor_pictures/',
         blank=True,
         null=True,
-        default='images/default_profile.png'
+        default='default_profile.png'
     )
+    bio = models.TextField(blank=True, null=True)
     is_active = models.BooleanField(default=True)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
@@ -51,7 +52,7 @@ class Student(models.Model):
         upload_to='student_pictures/',
         blank=True,
         null=True,
-        default='images/default_profile.png'
+        default='default_profile.png'
     )
     is_active = models.BooleanField(default=True)
     trainer = models.ForeignKey(Trainer, on_delete=models.SET_NULL, null=True, related_name='students')

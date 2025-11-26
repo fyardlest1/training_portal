@@ -1,0 +1,98 @@
+{% extends 'base.html' %} 
+{% load static %} 
+{% block content %}
+
+<div class="container mt-4">
+    <h2 class="display-5">Add New Student</h2>
+    <p class="lead fst-italic">Fill in the details below to add a new student.</p>
+    <hr class="my-4" />
+    <form action="{% url 'add_student' %}" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <div class="row">
+                <div class="mb-3 col-md-6">
+                    <label for="first_name" class="form-label">First Name</label>
+                    {{ student_form.first_name }}
+                    {% if student_form.first_name.errors %}
+                        <div class="text-danger">
+                            {{ student_form.first_name.errors }}
+                        </div>
+                    {% endif %}
+                </div>
+                <div class="mb-3 col-md-6">
+                    <label for="last_name" class="form-label">Last Name</label>
+                    {{ student_form.last_name }}
+                    {% if student_form.last_name.errors %}
+                        <div class="text-danger">
+                            {{ student_form.last_name.errors }}
+                        </div>
+                    {% endif %}
+                </div>
+                <div class="mb-3 col-md-6">
+                    <label for="email" class="form-label">Email</label>
+                    {{ student_form.email }}
+                    {% if student_form.email.errors %}
+                        <div class="text-danger">
+                            {{ student_form.email.errors }}
+                        </div>
+                    {% endif %}
+                </div>
+                <div class="mb-3 col-md-6">
+                    <label for="enrolled_course" class="form-label">Enrolled Course</label>
+                    {{ student_form.enrolled_course }}
+                    {% if student_form.enrolled_course.errors %}
+                        <div class="text-danger">
+                            {{ student_form.enrolled_course.errors }}
+                        </div>
+                    {% endif %}
+                </div>
+                <div class="mb-3 col-md-6">
+                    <label for="enrollment_date" class="form-label">Enrollment Date</label>
+                    {{ student_form.enrollment_date }}
+                    {% if student_form.enrollment_date.errors %}
+                        <div class="text-danger">
+                            {{ student_form.enrollment_date.errors }}
+                        </div>
+                    {% endif %}
+                </div>
+                <div class="mb-3 col-md-6">
+                    <label for="trainer" class="form-label">Trainer</label>                    
+                    {{ student_form.trainer }}
+                    {% if student_form.trainer.errors %}
+                        <div class="text-danger">
+                            {{ student_form.trainer.errors }}
+                        </div>
+                    {% endif %}
+                </div>
+                <div class="mb-3 col-md-6">
+                    <label for="profile_picture" class="form-label">Profile Picture</label>
+                    {{ student_form.profile_picture }}
+                    {% if student_form.profile_picture.errors %}
+                        <div class="text-danger">
+                            {{ student_form.profile_picture.errors }}
+                        </div>
+                    {% endif %}
+                </div>
+                <div class="col-md-6 d-flex align-items-center">
+                    <div class="form-check">
+                        <label for="is_active" class="form-label">Active?</label>
+                        {{ student_form.is_active }}
+                        {% if student_form.is_active.errors %}
+                            <div class="text-danger">
+                                {{ student_form.is_active.errors }}
+                            </div>
+                        {% endif %}
+                    </div>
+                </div>
+                {% if student_form.non_field_errors %}
+                    <div class="mb-3 col-md-12 text-danger">
+                        {{ student_form.non_field_errors }}
+                    </div>
+                {% endif %}
+        </div>
+        <div class="d-flex gap-2 mt-3">
+            <button type="submit" class="btn btn-primary">Submit</button>
+            <a href="{% url 'student_list' %}" class="btn btn-warning">Cancel</a>
+        </div>
+    </form>
+</div>
+{% endblock %}

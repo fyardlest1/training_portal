@@ -1,0 +1,60 @@
+{% extends 'base.html' %} 
+
+{% load static %} 
+
+{% block content %}
+
+<div class="container mt-4">
+    <div class="jumbotron">
+        <h2 class="display-5">Student Details</h2>
+        <p class="lead fst-italic">Detailed information about the trainer.</p>
+        <hr class="my-4" />
+        <div class="card mb-3" style="max-width: 540px;">
+            <div class="row g-0">
+                <div class="col-md-4">
+                    {% if student.profile_picture %}
+                    <img
+                        src="{{ student.profile_picture.url }}"
+                        alt=""
+                        class="img-fluid rounded-start"
+                    />
+                    {% else %}
+                    <img
+                        src="{% static 'images/default_profile.png' %}"
+                        alt=""
+                        class="img-fluid rounded-start"
+                    />
+                    {% endif %}
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h4 class="card-title">{{ student.full_name }}</h4>
+                        <p class="card-text"><strong>Enrolled Course:</strong> {{ student.enrolled_course }}</p>
+                        <p class="card-text"><strong>Email:</strong> {{ student.email }}</p>
+                        <p class="card-text"><strong>Trainer Name:</strong> {{ student.trainer.full_name }}</p>
+                        <div class="d-flex gap-2">
+                            <a href=""
+                                data-bs-toggle="tooltip" data-bs-placement="top"
+                                data-bs-custom-class="custom-tooltip"
+                                data-bs-title="Edit Student"
+                                class='btn btn-primary'
+                            >
+                                Edit Student
+                            </a>
+                            <a href=""
+                                data-bs-toggle="tooltip" data-bs-placement="top"
+                                data-bs-custom-class="custom-tooltip"
+                                data-bs-title="Delete Student"
+                                class='btn btn-danger'
+                            >
+                                Delete Student
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a class="btn btn-dark btn-md" href="{% url 'student_list' %}" role="button">Student List</a>
+    </div>
+</div>
+{% endblock content %}

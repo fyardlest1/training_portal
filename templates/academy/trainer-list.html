@@ -1,8 +1,11 @@
 {% extends 'base.html' %} {% load static %} {% block content %}
 <div class="container mt-4">
 	<div class="jumbotron">
-		<h2 class="display-5">Welcome to our Course list!</h2>
-		<p class="lead fst-italic">The best on-demand programming courses.</p>
+		<h2 class="display-5">Welcome to our Instructor list!</h2>
+		<p class="lead fst-italic">The best trainer working on the industry.</p>
+		<div class="text-end">
+            <a href="{% url 'add_trainer' %}" class='btn btn-success m-3'>Add Trainer</a>	
+        </div>
 		<hr class="my-4" />
 		<table class="table table-hover table-bordered table-striped">
 			<thead>
@@ -42,7 +45,7 @@
 					<td>{{ instructor.email }}</td>
 					<td>
 						<div class="d-flex gap-2">
-							<a href=""
+							<a href="{% url 'trainer_detail' instructor.pk %}"
 								data-bs-toggle="tooltip" data-bs-placement="top"
 								data-bs-custom-class="custom-tooltip"
 								data-bs-title="See Details"

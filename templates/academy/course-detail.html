@@ -1,0 +1,49 @@
+{% extends 'base.html' %} 
+{% load static %} 
+{% block content %}
+<div class="container mt-4">
+    <div class="jumbotron">
+        <h2 class="display-5">Course Details</h2>
+        <p class="lead fst-italic">Detailed information about the course.</p>
+        <hr class="my-4"/>
+        <div class="card mb-3">
+            <div class="row g-0">
+                <div class="col-md-4">
+                    <img
+                        src="{{ course.course_image.url }}"
+                        class="img-fluid rounded-start p-3"
+                        alt="{{ course }}"
+                    />
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h4 class="card-title">{{ course }}</h4>
+                        <p class="card-text"><strong>Duration:</strong> {{ course.duration_in_weeks }} Weeks</p>
+                        <p class="card-text"><strong>Description:</strong> {{ course.description }}</p> 
+                        <p class="card-text"><strong>Price:</strong> ${{ course.price|floatformat }}</p>\
+                        <div class="d-flex gap-2">
+                            <a href=""
+                                data-bs-toggle="tooltip" data-bs-placement="top"
+                                data-bs-custom-class="custom-tooltip"
+                                data-bs-title="Edit Course"
+                                class='btn btn-primary'
+                            >
+                                Edit Course
+                            </a>
+                            <a href=""
+                                data-bs-toggle="tooltip" data-bs-placement="top"
+                                data-bs-custom-class="custom-tooltip"
+                                data-bs-title="Delete Course"
+                                class='btn btn-danger'
+                            >
+                                Delete Course
+                            </a>
+                        </div>
+                    </div>  
+                </div>
+            </div>
+        </div>
+        <a class="btn btn-dark btn-md" href="{% url 'course_list' %}" role="button">Course List</a>
+    </div>
+</div>
+{% endblock content %}

@@ -5,6 +5,9 @@
     <div class="jumbotron">
         <h2 class="display-5">Welcome to our Course list!</h2>
         <p class="lead fst-italic">The best on-demand programming courses.</p>
+        <div class="text-end">
+            <a href="{% url 'add_course' %}" class='btn btn-success m-3'>Add Course</a>	
+        </div>
         <hr class="my-4">
         <table class="table table-hover table-bordered table-striped">
             <thead>
@@ -14,6 +17,7 @@
                     <th scope="col">Course Duration</th>
                     <th scope="col">Course Description</th>
                     <th scope="col">Course Price</th>
+                    <th scope="col">Actions</th>
                 </tr>
             </thead>
             <tbody>
@@ -25,9 +29,34 @@
                         <span>{{ course }} </span>
                     </td>
                     <td class="fw-bold">{{ course.duration_in_weeks }} Week</td>
-                    <td>{{ course.description }}</td>
+                    <td>{{ course.description|truncatewords:9 }}</td>
                     <!-- Remove the decimal part of a floating-point -->
                     <td class="fw-bold fst-italic">${{ course.price|floatformat }}</td>
+                    <td>
+                        <div class="d-flex gap-2">
+							<a href="{% url 'course_detail' course.pk %}"
+								data-bs-toggle="tooltip" data-bs-placement="top"
+								data-bs-custom-class="custom-tooltip"
+								data-bs-title="See Details"
+							>
+								<i class='fa fa-eye text-success'></i>
+							</a>
+							<a href=""
+								data-bs-toggle="tooltip" data-bs-placement="top"
+								data-bs-custom-class="custom-tooltip"
+								data-bs-title="Edit Trainer"
+							>
+								<i class='fa fa-edit text-primary'></i>
+							</a>
+							<a href=""
+								data-bs-toggle="tooltip" data-bs-placement="top"
+								data-bs-custom-class="custom-tooltip"
+								data-bs-title="Delete Trainer"
+							>
+								<i class='fa fa-trash text-danger'></i>
+							</a>
+						</div>
+                    </td>
                 </tr>
                 {% endfor %}
             </tbody>
