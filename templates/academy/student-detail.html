@@ -33,7 +33,7 @@
                         <p class="card-text"><strong>Email:</strong> {{ student.email }}</p>
                         <p class="card-text"><strong>Trainer Name:</strong> {{ student.trainer.full_name }}</p>
                         <div class="d-flex gap-2">
-                            <a href=""
+                            <a href="{% url 'edit_student' student.pk %}"
                                 data-bs-toggle="tooltip" data-bs-placement="top"
                                 data-bs-custom-class="custom-tooltip"
                                 data-bs-title="Edit Student"

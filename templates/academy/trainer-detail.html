@@ -33,7 +33,7 @@
                         <p class="card-text"><strong>Email:</strong> {{ trainer.email }}</p>
                         <p class="card-text"><strong>Bio:</strong> {{ trainer.bio }}</p>
                         <div class="d-flex gap-2">
-                            <a href=""
+                            <a href="{% url 'edit_trainer' trainer.pk %}"
                                 data-bs-toggle="tooltip" data-bs-placement="top"
                                 data-bs-custom-class="custom-tooltip"
                                 data-bs-title="Edit Trainer"
@@ -41,7 +41,7 @@
                             >
                                 Edit Trainer
                             </a>
-                            <a href=""
+                            <a href="#"
                                 data-bs-toggle="tooltip" data-bs-placement="top"
                                 data-bs-custom-class="custom-tooltip"
                                 data-bs-title="Delete Trainer"

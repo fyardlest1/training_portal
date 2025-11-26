@@ -13,7 +13,7 @@ class CourseForm(forms.ModelForm):
             'description': forms.Textarea(attrs={'class': 'form-control'}),
             'duration_in_weeks': forms.NumberInput(attrs={'class': 'form-control'}),
             'price': forms.NumberInput(attrs={'class': 'form-control'}),
-            'course_image': forms.ClearableFileInput(attrs={'class': 'form-control'}),
+            'course_image': forms.FileInput(attrs={'class': 'form-control'}),
         }
         
         
@@ -26,7 +26,7 @@ class TrainerForm(forms.ModelForm):
             'last_name': forms.TextInput(attrs={'class': 'form-control'}),
             'email': forms.EmailInput(attrs={'class': 'form-control'}),
             'expertise': forms.TextInput(attrs={'class': 'form-control'}),
-            'profile_picture': forms.ClearableFileInput(attrs={'class': 'form-control'}),
+            'profile_picture': forms.FileInput(attrs={'class': 'form-control'}),
             'bio': forms.Textarea(attrs={'class': 'form-control'}),
             'is_active': forms.CheckboxInput(attrs={'class': 'form-check-input'}),
         }
@@ -45,7 +45,7 @@ class StudentForm(forms.ModelForm):
                 'class': 'form-control', 
                 'type': 'date'
             }),
-            'profile_picture': forms.ClearableFileInput(attrs={'class': 'form-control'}),
+            'profile_picture': forms.FileInput(attrs={'class': 'form-control'}),
             'is_active': forms.CheckboxInput(attrs={'class': 'form-check-input'}),
             'trainer': forms.Select(attrs={'class': 'form-control'}),
         }

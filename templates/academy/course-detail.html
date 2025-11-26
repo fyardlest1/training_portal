@@ -22,7 +22,7 @@
                         <p class="card-text"><strong>Description:</strong> {{ course.description }}</p> 
                         <p class="card-text"><strong>Price:</strong> ${{ course.price|floatformat }}</p>\
                         <div class="d-flex gap-2">
-                            <a href=""
+                            <a href="{% url 'edit_course' course.pk %}"
                                 data-bs-toggle="tooltip" data-bs-placement="top"
                                 data-bs-custom-class="custom-tooltip"
                                 data-bs-title="Edit Course"

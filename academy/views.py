@@ -4,7 +4,6 @@ from .models import Course, Trainer, Student
 from .forms import CourseForm, TrainerForm, StudentForm
 
 
-
 # reate views for Course, Trainer, and Student
 def course_list(request): # Step 1: Logic to retrieve and display a list of courses
     # Logic to retrieve and display a list of courses
@@ -47,6 +46,26 @@ def add_course(request): # Step 3: Logic to add a new course
     return render(request, 'academy/add-course.html', context)
 
 
+def edit_course(request, pk=None): # Step 4: Logic to edit an existing course
+    # Logic to edit an existing course
+    course = get_object_or_404(Course, pk=pk) # get the course object
+    
+    if request.method == 'POST':
+        course_form = CourseForm(request.POST, request.FILES, instance=course)
+        if course_form.is_valid():
+            course_form.save()
+            # Redirect to course detail page after saving where pk is course.pk
+            return redirect('course_detail', pk=course.pk) 
+    else:
+        course_form = CourseForm(instance=course)
+        
+    context = {
+        'course_form': course_form, # form instance to be used in the template
+        'course': course, # course instance to be used in the template
+    }
+    return render(request, 'academy/edit-course.html', context)
+
+
 def trainer_list(request): # Step 1: Logic to retrieve and display a list of trainers
     # Logic to retrieve and display a list of trainers
     instructors = Trainer.objects.all()
@@ -57,7 +76,7 @@ def trainer_list(request): # Step 1: Logic to retrieve and display a list of tra
     return render(request, 'academy/trainer-list.html', context)
 
 
-def trainer_detail(request, pk): # Step 2: Detail view for a specific trainer
+def trainer_detail(request, pk=None): # Step 2: Detail view for a specific trainer
     # Logic to retrieve and display details of a specific trainer
     try:
         trainer = get_object_or_404(Trainer, pk=pk)
@@ -87,6 +106,26 @@ def add_trainer(request): # Step 3: Logic to add a new trainer
     return render(request, 'academy/add-trainer.html', context)
 
 
+def edit_trainer(request, pk=None): # Step 4: Logic to edit an existing trainer
+    # Logic to edit an existing trainer
+    trainer = get_object_or_404(Trainer, pk=pk) # get the trainer object
+    
+    if request.method == 'POST':
+        trainer_form = TrainerForm(request.POST, request.FILES, instance=trainer)
+        if trainer_form.is_valid():
+            trainer_form.save()
+            # Redirect to trainer detail page after saving where pk is trainer.pk
+            return redirect('trainer_detail', pk=trainer.pk) 
+    else:
+        trainer_form = TrainerForm(instance=trainer)
+        
+    context = {
+        'trainer_form': trainer_form, # form instance to be used in the template
+        'trainer': trainer, # trainer instance to be used in the template
+    }
+    return render(request, 'academy/edit-trainer.html', context)
+
+
 def student_list(request): # Step 1: Logic to retrieve and display a list of students
     # Logic to retrieve and display a list of students
     students = Student.objects.all()
@@ -99,7 +138,7 @@ def student_list(request): # Step 1: Logic to retrieve and display a list of stu
     return render(request, 'academy/student-list.html', context)
 
 
-def student_detail(request, pk): # Step 2: Detail view for a specific student
+def student_detail(request, pk=None): # Step 2: Detail view for a specific student
     # Logic to retrieve and display details of a specific student
     try:
         student = get_object_or_404(Student, pk=pk)
@@ -127,3 +166,23 @@ def add_student(request): # Step 3: Logic to add a new student
         'student_form': student_form,
     }
     return render(request, 'academy/add-student.html', context)
+
+
+def edit_student(request, pk=None): # Step 4: Logic to edit an existing student
+    # Logic to edit an existing student
+    student = get_object_or_404(Student, pk=pk) # get the student object
+    
+    if request.method == 'POST':
+        student_form = StudentForm(request.POST, request.FILES, instance=student)
+        if student_form.is_valid():
+            student_form.save()
+            # Redirect to student detail page after saving where pk is student.pk
+            return redirect('student_detail', pk=student.pk) 
+    else:
+        student_form = StudentForm(instance=student)
+        
+    context = {
+        'student_form': student_form, # form instance to be used in the template
+        'student': student, # student instance to be used in the template
+    }
+    return render(request, 'academy/edit-student.html', context)
