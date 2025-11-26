@@ -50,5 +50,42 @@
             })
         });
     </script>
+
+    <!-- <script>
+        const tooltipTriggerList = document.querySelectorAll('[title]');
+        tooltipTriggerList.forEach(el => {
+            new bootstrap.Tooltip(el);
+        });
+    </script> -->
+
+    <!-- JavaScript: Show / hide the confirmation box -->
+    <script>
+        document.querySelectorAll('.delete-icon').forEach(function(icon) {
+            icon.addEventListener('click', function(e) {
+                e.preventDefault();
+
+                const container = icon.closest('.delete-container');
+                const box = container.querySelector('.delete-confirm-box');
+
+                // Set delete URL dynamically
+                const url = icon.getAttribute('data-delete-url');
+                container.querySelector('.confirm-yes').href = url;
+
+                // Show the confirmation box
+                box.classList.remove('d-none');
+            });
+        });
+
+        // Cancel button
+        document.querySelectorAll('.confirm-no').forEach(function(btn) {
+            btn.addEventListener('click', function(e) {
+                const box = e.target.closest('.delete-confirm-box');
+                box.classList.add('d-none');
+            });
+        });
+    </script>
+
+    
+
 </body>
 </html>

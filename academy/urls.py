@@ -19,4 +19,8 @@ urlpatterns = [
     path('courses/<int:pk>/edit/', views.edit_course, name='edit_course'), # Step 4 : Edit an existing course
     path('trainers/<int:pk>/edit/', views.edit_trainer, name='edit_trainer'), # Step 4 : Edit an existing trainer
     path('students/<int:pk>/edit/', views.edit_student, name='edit_student'), # Step 4 : Edit an existing student
+    # Delete
+    path('courses/<int:pk>/delete/', views.delete_course, name='delete_course'), # Step 5 : Delete an existing course
+    path('trainers/<int:pk>/delete/', views.delete_trainer, name='delete_trainer'), # Step 5 : Delete an existing trainer
+    path('students/<int:pk>/delete/', views.delete_student, name='delete_student'), # Step 5 : Delete an existing student
 ]

@@ -32,23 +32,37 @@
                         <p class="card-text"><strong>Expertise:</strong> {{ trainer.expertise }}</p>
                         <p class="card-text"><strong>Email:</strong> {{ trainer.email }}</p>
                         <p class="card-text"><strong>Bio:</strong> {{ trainer.bio }}</p>
-                        <div class="d-flex gap-2">
+                        <div class="d-flex gap-2 align-items-center">
                             <a href="{% url 'edit_trainer' trainer.pk %}"
-                                data-bs-toggle="tooltip" data-bs-placement="top"
+                                data-bs-toggle="tooltip" 
+                                data-bs-placement="top"
                                 data-bs-custom-class="custom-tooltip"
                                 data-bs-title="Edit Trainer"
                                 class='btn btn-primary'
                             >
                                 Edit Trainer
                             </a>
-                            <a href="#"
-                                data-bs-toggle="tooltip" data-bs-placement="top"
-                                data-bs-custom-class="custom-tooltip"
-                                data-bs-title="Delete Trainer"
-                                class='btn btn-danger'
-                            >
-                                Delete Trainer
-                            </a>
+
+                            <div class="delete-container position-relative">
+                                <a  href="#"
+                                    class="btn btn-danger delete-icon"
+                                    data-delete-url="{% url 'delete_trainer' trainer.pk %}"
+                                    data-course-name="{{ trainer.full_name }}"
+                                    data-bs-toggle="tooltip"
+                                    data-bs-placement="top"
+                                    data-bs-custom-class="custom-tooltip"
+                                    data-bs-title="Delete Course"
+                                >
+                                    Delete Trainer
+                                </a>
+
+                                <!-- Inline confirmation box (absolute, no flex impact) -->
+                                <div class="delete-confirm-box small d-none text-center p-2 border rounded position-absolute">
+                                    <span class="text-danger">Are you sure?</span><br>
+                                    <a href="#" class="btn btn-sm btn-danger confirm-yes">Yes</a>
+                                    <button class="btn btn-sm btn-secondary confirm-no">No</button>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

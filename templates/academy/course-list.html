@@ -33,7 +33,7 @@
                     <!-- Remove the decimal part of a floating-point -->
                     <td class="fw-bold fst-italic">${{ course.price|floatformat }}</td>
                     <td>
-                        <div class="d-flex gap-2">
+                        <div class="d-flex gap-2 align-items-center"> 
 							<a href="{% url 'course_detail' course.pk %}"
 								data-bs-toggle="tooltip" data-bs-placement="top"
 								data-bs-custom-class="custom-tooltip"
@@ -44,20 +44,34 @@
 							<a href="{% url 'edit_course' course.pk %}"
 								data-bs-toggle="tooltip" data-bs-placement="top"
 								data-bs-custom-class="custom-tooltip"
-								data-bs-title="Edit Trainer"
+								data-bs-title="Edit Course"
 							>
 								<i class='fa fa-edit text-primary'></i>
 							</a>
-							<a href="#"
-								data-bs-toggle="tooltip" data-bs-placement="top"
-								data-bs-custom-class="custom-tooltip"
-								data-bs-title="Delete Trainer"
-							>
-								<i class='fa fa-trash text-danger'></i>
-							</a>
+							<div class="delete-container position-relative">
+                                <a  href="#"
+                                    class="delete-icon"
+                                    data-delete-url="{% url 'delete_course' course.pk %}"
+                                    data-course-name="{{ course.course_name }}"
+                                    data-bs-toggle="tooltip"
+                                    data-bs-placement="top"
+                                    data-bs-custom-class="custom-tooltip"
+                                    data-bs-title="Delete Course"
+                                >
+                                    <i class="fa fa-trash text-danger"></i>
+                                </a>
+
+                                <!-- Inline confirmation box (hidden by default) -->
+                                <div class="delete-confirm-box small mt-1 d-none text-center p-2 border rounded position-absolute">
+                                    <span class="text-danger">Are you sure?</span>
+                                    <br>
+                                    <a href="#" class="btn btn-sm btn-danger confirm-yes">Yes</a>
+                                    <button class="btn btn-sm btn-secondary confirm-no">No</button>
+                                </div>
+                            </div>
 						</div>
                     </td>
-                </tr>
+                </tr> 
                 {% endfor %}
             </tbody>
         </table>
@@ -68,4 +82,6 @@
         <a class="btn btn-primary btn-md" href="{% url 'trainer_list' %}" role="button">Our Instructors</a>
     </div>
 </div>
+
+
 {% endblock %}

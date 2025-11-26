@@ -66,6 +66,14 @@ def edit_course(request, pk=None): # Step 4: Logic to edit an existing course
     return render(request, 'academy/edit-course.html', context)
 
 
+def delete_course(request, pk): # Step 5: Logic to delete an existing course
+    # Logic to delete an existing course
+    course = get_object_or_404(Course, pk=pk) # get the course object
+    
+    course.delete()
+    return redirect('course_list')
+
+
 def trainer_list(request): # Step 1: Logic to retrieve and display a list of trainers
     # Logic to retrieve and display a list of trainers
     instructors = Trainer.objects.all()
@@ -124,6 +132,14 @@ def edit_trainer(request, pk=None): # Step 4: Logic to edit an existing trainer
         'trainer': trainer, # trainer instance to be used in the template
     }
     return render(request, 'academy/edit-trainer.html', context)
+
+
+def delete_trainer(request, pk): # Step 5: Logic to delete an existing trainer
+    # Logic to delete an existing trainer
+    trainer = get_object_or_404(Trainer, pk=pk) # get the trainer object
+    
+    trainer.delete()
+    return redirect('trainer_list')
 
 
 def student_list(request): # Step 1: Logic to retrieve and display a list of students
@@ -186,3 +202,11 @@ def edit_student(request, pk=None): # Step 4: Logic to edit an existing student
         'student': student, # student instance to be used in the template
     }
     return render(request, 'academy/edit-student.html', context)
+
+
+def delete_student(request, pk): # Step 5: Logic to delete an existing student
+    # Logic to delete an existing student
+    student = get_object_or_404(Student, pk=pk) # get the student object
+    
+    student.delete()
+    return redirect('student_list')
