@@ -3,9 +3,12 @@
 	<div class="jumbotron">
 		<h2 class="display-5">Welcome to our Instructor list!</h2>
 		<p class="lead fst-italic">The best trainer working on the industry.</p>
+		<!-- if the user do not have permission, do not show the button -->
+		{% if perms.academy.add_trainer %}
 		<div class="text-end">
             <a href="{% url 'add_trainer' %}" class='btn btn-success m-3'>Add Trainer</a>	
         </div>
+		{% endif %}
 		<hr class="my-4" />
 		<table class="table table-hover table-bordered table-striped">
 			<thead>
@@ -14,7 +17,9 @@
 					<th scope="col">Name</th>
 					<th scope="col">Expertise</th>
 					<th scope="col">Email</th>
+					{% if perms.academy.view_trainer == request.user.is_staff %}
 					<th scope="col">Actions</th>
+					{% endif %}
 				</tr>
 			</thead>
 			<tbody>
@@ -43,8 +48,10 @@
 					</td>
 					<td>{{ instructor.expertise }}</td>
 					<td>{{ instructor.email }}</td>
+
 					<td>
 						<div class="d-flex gap-2 align-items-center">
+							{% if perms.academy.view_trainer == request.user.is_staff %}
 							<a href="{% url 'trainer_detail' instructor.pk %}"
 								data-bs-toggle="tooltip" data-bs-placement="top"
 								data-bs-custom-class="custom-tooltip"
@@ -52,6 +59,9 @@
 							>
 								<i class='fa fa-eye text-success'></i>
 							</a>
+							{% endif %}
+
+							{% if perms.academy.change_trainer %}
 							<a href="{% url 'edit_trainer' instructor.pk %}"
 								data-bs-toggle="tooltip" data-bs-placement="top"
 								data-bs-custom-class="custom-tooltip"
@@ -59,7 +69,8 @@
 							>
 								<i class='fa fa-edit text-primary'></i>
 							</a>
-
+							{% endif %}
+							{% if perms.academy.delete_trainer %}
 							<div class="delete-container position-relative">
                                 <a  href="#"
                                     class="delete-icon"
@@ -80,6 +91,7 @@
                                     <button class="btn btn-sm btn-secondary confirm-no">No</button>
                                 </div>
                             </div>
+							{% endif %}
 						</div>
 					</td>
 				</tr>

@@ -16,6 +16,22 @@ class TrainerAdmin(admin.ModelAdmin):
     search_fields = ('first_name', 'last_name', 'email', 'expertise')
     ordering = ('last_name', 'first_name')
     
+    def get_queryset(self, request):
+        qs = super().get_queryset(request)
+        # superusers can see all trainers
+        if request.user.is_superuser:
+            return qs
+        # trainers can only see their own records
+        return qs.filter(user=request.user)
+    
+    
+    def has_view_permission(self, request, obj=None):
+        if request.user.is_superuser or request.user.is_staff:
+            return True
+        if obj is None:
+            return True  # allows listing (filtered by get_queryset)
+        return obj.user == request.user
+    
 
 class StudentAdmin(admin.ModelAdmin):
     list_display = ('full_name', 'email', 'enrolled_course', 'enrollment_date', 'is_active', 'trainer')
@@ -24,6 +40,23 @@ class StudentAdmin(admin.ModelAdmin):
     list_display_links = ('full_name', 'email')
     search_fields = ('first_name', 'last_name', 'email', 'enrolled_course__course_name',)   
     ordering = ('last_name', 'first_name')
+    
+    # override get_queryset to filter which objects the user can see
+    def get_queryset(self, request):
+        qs = super().get_queryset(request)
+        # superusers can see all students
+        if request.user.is_superuser:
+            return qs
+        # students can only see their own records
+        return qs.filter(user=request.user)
+    
+    
+    def has_view_permission(self, request, obj=None):
+        if request.user.is_superuser or request.user.is_staff:
+            return True
+        if obj is None:
+            return True  # allows listing (filtered by get_queryset)
+        return obj.user == request.user 
 
 
 # Register your models here.

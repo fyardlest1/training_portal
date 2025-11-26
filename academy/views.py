@@ -1,4 +1,5 @@
 from django.shortcuts import render, get_object_or_404, redirect
+from django.contrib.auth.decorators import login_required, permission_required
 
 from .models import Course, Trainer, Student
 from .forms import CourseForm, TrainerForm, StudentForm
@@ -15,6 +16,7 @@ def course_list(request): # Step 1: Logic to retrieve and display a list of cour
     return render(request, 'academy/course-list.html', context)
 
 
+@login_required
 def course_detail(request, pk): # Step 2: Detail view for a specific course
     # Logic to retrieve and display details of a specific course
     try:
@@ -29,6 +31,8 @@ def course_detail(request, pk): # Step 2: Detail view for a specific course
     return render(request, 'academy/course-detail.html', context)
 
 
+@login_required
+@permission_required('academy.add_course', raise_exception=True)
 def add_course(request): # Step 3: Logic to add a new course
     # Logic to add a new course
     if request.method == 'POST':
@@ -46,6 +50,8 @@ def add_course(request): # Step 3: Logic to add a new course
     return render(request, 'academy/add-course.html', context)
 
 
+@login_required
+@permission_required('academy.change_course', raise_exception=True)
 def edit_course(request, pk=None): # Step 4: Logic to edit an existing course
     # Logic to edit an existing course
     course = get_object_or_404(Course, pk=pk) # get the course object
@@ -66,6 +72,8 @@ def edit_course(request, pk=None): # Step 4: Logic to edit an existing course
     return render(request, 'academy/edit-course.html', context)
 
 
+@login_required
+@permission_required('academy.delete_course', raise_exception=True)
 def delete_course(request, pk): # Step 5: Logic to delete an existing course
     # Logic to delete an existing course
     course = get_object_or_404(Course, pk=pk) # get the course object
@@ -84,6 +92,7 @@ def trainer_list(request): # Step 1: Logic to retrieve and display a list of tra
     return render(request, 'academy/trainer-list.html', context)
 
 
+@login_required
 def trainer_detail(request, pk=None): # Step 2: Detail view for a specific trainer
     # Logic to retrieve and display details of a specific trainer
     try:
@@ -97,6 +106,8 @@ def trainer_detail(request, pk=None): # Step 2: Detail view for a specific train
     return render(request, 'academy/trainer-detail.html', context)
 
 
+@login_required
+@permission_required('academy.add_trainer', raise_exception=True)
 def add_trainer(request): # Step 3: Logic to add a new trainer
     # Logic to add a new trainer
     if request.method == 'POST':
@@ -114,6 +125,8 @@ def add_trainer(request): # Step 3: Logic to add a new trainer
     return render(request, 'academy/add-trainer.html', context)
 
 
+@login_required
+@permission_required('academy.change_trainer', raise_exception=True)
 def edit_trainer(request, pk=None): # Step 4: Logic to edit an existing trainer
     # Logic to edit an existing trainer
     trainer = get_object_or_404(Trainer, pk=pk) # get the trainer object
@@ -134,6 +147,8 @@ def edit_trainer(request, pk=None): # Step 4: Logic to edit an existing trainer
     return render(request, 'academy/edit-trainer.html', context)
 
 
+@login_required
+@permission_required('academy.delete_trainer', raise_exception=True)
 def delete_trainer(request, pk): # Step 5: Logic to delete an existing trainer
     # Logic to delete an existing trainer
     trainer = get_object_or_404(Trainer, pk=pk) # get the trainer object
@@ -144,16 +159,21 @@ def delete_trainer(request, pk): # Step 5: Logic to delete an existing trainer
 
 def student_list(request): # Step 1: Logic to retrieve and display a list of students
     # Logic to retrieve and display a list of students
+    
+    # get the logged-in user
+    # user = request.user
+    
+    # get the list of students
     students = Student.objects.all()
     # trainer = Trainer.objects.get_queryset()
         
     context = {
         'students': students,
-        # 'trainer': trainer,
     }
     return render(request, 'academy/student-list.html', context)
 
 
+@login_required
 def student_detail(request, pk=None): # Step 2: Detail view for a specific student
     # Logic to retrieve and display details of a specific student
     try:
@@ -167,6 +187,8 @@ def student_detail(request, pk=None): # Step 2: Detail view for a specific stude
     return render(request, 'academy/student-detail.html', context)
 
 
+@login_required
+@permission_required('academy.add_student', raise_exception=True)
 def add_student(request): # Step 3: Logic to add a new student
     # Logic to add a new student
     if request.method == 'POST':
@@ -184,6 +206,8 @@ def add_student(request): # Step 3: Logic to add a new student
     return render(request, 'academy/add-student.html', context)
 
 
+@login_required
+@permission_required('academy.change_student', raise_exception=True)
 def edit_student(request, pk=None): # Step 4: Logic to edit an existing student
     # Logic to edit an existing student
     student = get_object_or_404(Student, pk=pk) # get the student object
@@ -204,6 +228,8 @@ def edit_student(request, pk=None): # Step 4: Logic to edit an existing student
     return render(request, 'academy/edit-student.html', context)
 
 
+@login_required
+@permission_required('academy.delete_student', raise_exception=True)
 def delete_student(request, pk): # Step 5: Logic to delete an existing student
     # Logic to delete an existing student
     student = get_object_or_404(Student, pk=pk) # get the student object

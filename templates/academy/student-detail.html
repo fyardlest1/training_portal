@@ -42,7 +42,7 @@
                             >
                                 Edit Student
                             </a>
-
+                            {% if perms.academy.delete_student %}
                             <div class="delete-container position-relative">
                                 <a  href="#"
                                     class="btn btn-danger delete-icon"
@@ -63,6 +63,7 @@
                                     <button class="btn btn-sm btn-secondary confirm-no">No</button>
                                 </div>
                             </div>
+                            {% endif %}
                         </div>
                     </div>
                 </div>

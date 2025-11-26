@@ -7,10 +7,12 @@
 	<div class="jumbotron">
 		<h2 class="display-5">The Student list!</h2>
 		<p class="lead fst-italic">The best on-demand programming courses.</p>
+		<!-- if the user do not have permission, do not show the button -->
+		{% if perms.academy.add_student %}
         <div class="text-end">
             <a href="{% url 'add_student' %}" class='btn btn-success m-3'>Add Student</a>	
         </div>
-		
+		{% endif %}
 		<hr class="my-4" />
 		<table class="table table-hover table-bordered table-striped">
 			<thead>
@@ -21,7 +23,9 @@
 					<th scope="col">Email</th>
 					<th scope="col">Trainer Name</th>
 					<th scope="col">Active?</th>
+					{% if perms.academy.view_student == request.user.is_staff  %}
 					<th scope="col">Actions</th>
+					{% endif %}
 				</tr>
 			</thead>
 			<tbody>
@@ -61,6 +65,7 @@
 
 					<td>
 						<div class="d-flex gap-2 align-items-center">
+							{% if perms.academy.view_student == request.user.is_staff %}
 							<a href="{% url 'student_detail' student.pk %}"
 								data-bs-toggle="tooltip" data-bs-placement="top"
 								data-bs-custom-class="custom-tooltip"
@@ -68,6 +73,8 @@
 							>
 								<i class='fa fa-eye text-success'></i>
 							</a>
+							{% endif %}
+							{% if perms.academy.change_student %}
 							<a href="{% url 'edit_student' student.pk %}"
 								data-bs-toggle="tooltip" data-bs-placement="top"
 								data-bs-custom-class="custom-tooltip"
@@ -75,7 +82,8 @@
 							>
 								<i class='fa fa-edit text-primary'></i>
 							</a>
-
+							{% endif %}
+							{% if perms.academy.delete_student %}
 							<div class="delete-container position-relative">
                                 <a  href="#"
                                     class="delete-icon"
@@ -96,6 +104,7 @@
                                     <button class="btn btn-sm btn-secondary confirm-no">No</button>
                                 </div>
                             </div>
+							{% endif %}
 						</div>
 					</td>
 				</tr>
