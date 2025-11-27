@@ -1,5 +1,6 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from django.contrib.auth.decorators import login_required, permission_required
+from django.core.paginator import Paginator
 
 from .models import Course, Trainer, Student
 from .forms import CourseForm, TrainerForm, StudentForm
@@ -164,11 +165,18 @@ def student_list(request): # Step 1: Logic to retrieve and display a list of stu
     # user = request.user
     
     # get the list of students
-    students = Student.objects.all()
+    students = Student.objects.all().order_by('last_name')
+    paginator = Paginator(students, 10)  # Show 10 students per page
+    
+    # Get the page number from request GET parameters
+    page_number = request.GET.get('page')
+    page_obj = paginator.get_page(page_number) # Auto-handles invalid input
+        
     # trainer = Trainer.objects.get_queryset()
         
     context = {
         'students': students,
+        'page_obj': page_obj,
     }
     return render(request, 'academy/student-list.html', context)
 
